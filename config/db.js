@@ -8,7 +8,7 @@ const connectDB = async () => {
       db,
       {
         useNewUrlParser: true,
-        useUnifiedTopology: true
+        useUnifiedTopology: true,
       }
     );
 
