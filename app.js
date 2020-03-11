@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 // routes
 const books = require('./routes/api/books');
+const wishes = require('./routes/api/wishes');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.get('/', (req, res) => res.send('Hello world!'));
 
 // use Routes
 app.use('/api/books', books);
+app.use('/api/wishes', wishes);
 
 
 const port = process.env.PORT || 8082;
