@@ -19,4 +19,9 @@ router.post("/", (req, res) => {
     .catch(err => res.status(400).json({error: err}));
 });
 
+router.delete("/:id", (req, res)=>{
+  Wish.findByIdAndRemove(req.params.id, req.body)
+  .then(wish=> res.json({msgs: 'Wish Deleted'}))
+  .catch(err => res.status(404).json({error: "No such wish"}))
+});
 module.exports = router;
